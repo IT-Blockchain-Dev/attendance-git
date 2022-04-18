@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\AttendanceController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -30,4 +31,7 @@ Route::middleware(['cors'])->group(function(){
     Route::get('/events/get',[EventController::class,'get']);
     Route::post('/events/delete',[EventController::class,'delete']);
     Route::post('/events/update',[EventController::class,'update']);
+
+    Route::get('/attendance/getDefaultAttendances',[AttendanceController::class,'getDefaultAttendances']);
+    Route::post('/attendance/changeStatus',[AttendanceController::class,'changeStatus']);
 });

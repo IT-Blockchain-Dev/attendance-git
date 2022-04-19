@@ -34,4 +34,7 @@ Route::middleware(['cors'])->group(function(){
 
     Route::get('/attendance/getDefaultAttendances',[AttendanceController::class,'getDefaultAttendances']);
     Route::post('/attendance/changeStatus',[AttendanceController::class,'changeStatus']);
+    Route::post('/attendance/updateComment',[AttendanceController::class,'updateComment']);
+
+
 });
